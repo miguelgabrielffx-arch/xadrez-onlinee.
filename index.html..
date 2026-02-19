@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Xadrez Online</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      background-color: #0f0f0f;
+      color: white;
+      font-family: monospace;
+      text-align: center;
+      padding: 40px;
+    }
+
+    button {
+      padding: 12px 25px;
+      font-size: 16px;
+      background-color: #ff4d6d;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background-color: #ff1e4d;
+    }
+
+    .loading {
+      font-size: 18px;
+      white-space: pre-line;
+      margin-top: 20px;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .heart {
+      font-size: 28px;
+      margin-top: 20px;
+      animation: pulse 1s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+
+<h1>♟️ Xadrez Online</h1>
+<p>Clique abaixo para iniciar o jogo...</p>
+
+<button onclick="iniciar()">Iniciar Jogo</button>
+
+<div id="conteudo" class="hidden">
+
+<div class="loading">
+🎮 Carregando jogo...
+
+█░░░░░░░░ 10%
+███░░░░░░ 30%
+██████░░░ 70%
+█████████ 100%
+
+Erro detectado...
+</div>
+
+<br>
+
+<div id="declaracao" class="hidden">
+
+<p>O verdadeiro jogo que eu tô jogando é tentar conquistar você todos os dias 🤍</p>
+
+<p>Se você entrou aqui achando que era um jogo…<br>
+Parabéns.<br>
+Você acabou de desbloquear o meu coração.</p>
+
+<p>Eu sei que isso pode parecer do nada, mas eu precisava falar.</p>
+
+<p>Eu amo você. Amo seu sorriso, amo sua risada, amo seus olhinhos…<br>
+Eu literalmente amo tudo em você.</p>
+
+<p>Eu admito que tô perdidamente apaixonado por você.</p>
+
+<p>O que eu não encontrei em dois anos,<br>
+você me ofereceu em poucos dias.</p>
+
+<p>E por mim isso não acaba.</p>
+
+<p>Eu sei que nem sempre vai ser perfeito,<br>
+mas sempre que algo der errado eu prefiro consertar 100 vezes do que te perder uma única vez.</p>
+
+<p>Eu não te quero só hoje.<br>
+Nem só amanhã.<br>
+Eu te quero pro meu futuro.</p>
+
+<p>Eu sei que não sou perfeito…<br>
+mas por você eu me esforço pra ser melhor todos os dias.</p>
+
+<p>Não vejo a hora de te ver, te encher de beijinho, te abraçar forte e ficar olhando pra você pensando como eu tive tanta sorte.</p>
+
+<p>Eu te amo, minha princesa.<br>
+E pode ter certeza que eu nunca vou deixar de demonstrar isso.</p>
+
+<p>Se esse fosse realmente um jogo,<br>
+a única coisa que eu ia querer ganhar…<br>
+é você 🤍</p>
+
+<div class="heart">❤️</div>
+
+</div>
+</div>
+
+<script>
+function iniciar() {
+  document.querySelector("button").style.display = "none";
+  document.getElementById("conteudo").classList.remove("hidden");
+
+  setTimeout(function(){
+    document.getElementById("declaracao").classList.remove("hidden");
+  }, 4000);
+}
+</script>
+
+</body>
+</html>
